@@ -40,6 +40,25 @@
 
 ---
 
+## English
+
+**lhg-finder — Skill vetting gate.** Before installing a third-party AI skill, run the blocker checklist and a six-dimension scorecard; two confirmation gates mean nothing installs automatically. Install: `npx skills add lhg-skills/lhg-finder`.
+
+---
+
+## FAQ
+
+**Q：lhg-finder 有什么用？**
+适合的场景：装别人做的第三方 skill 之前想先验货：blocker 三件套加六维评分卡，两道确认门永不自动安装。
+
+**Q：免费吗？怎么安装？**
+开源免费（MIT，可商用、保留署名）。安装：`npx skills add lhg-skills/lhg-finder`，或 clone 仓库把 `SKILL.md` 放进对应平台的 skills 目录。
+
+**Q：支持哪些 AI 平台？**
+平台中立纯 Markdown 流程描述，Claude Code、Codex、豆包智能体、Workbuddy、扣子、Trae 等支持 Markdown 指令的环境都可用。更多 skill 见 [lhg-skills 组织主页](https://github.com/lhg-skills)。
+
+---
+
 ## lhg-skills 矩阵
 
 刘洪光出品的中文 Agent Skills，全开源：
