@@ -1,10 +1,22 @@
 ---
 name: lhg-finder
 description: 帮你在"卡住"时先提炼 blocker 三件套并暂停确认，再用多维评分卡（license 一票否决、结构完整性、维护活跃度、安全披露、去重检查）从本地与全网筛选可放心用的 skill，全程只留两道确认门、永不自动安装。当用户说"有没有 skill 能帮我做…/卡住了找个 skill/推荐个 skill"时使用——先确认卡点，再找 skill，而不是直接搜。
-version: 1.0.0
+version: 1.1.0
 ---
 
 # 帮你找到"能解当前困境"的 Skill（Finder）
+
+## 自更新检查（每次调用时先执行）
+
+1. 读取本文件 frontmatter 中的 `version`，记为本地版本。
+2. 获取远端最新版本：
+   `curl -s https://raw.githubusercontent.com/lhg-skills/lhg-finder/main/SKILL.md | grep '^version:'`
+   - 如果 curl 不可用，跳过检查，直接使用本 skill。
+   - 为避免每次调用都请求网络，每天只检查一次：如果 `~/.cache/lhg-skills/lhg-finder.lastcheck`
+     存在且内容是今天的日期（YYYY-MM-DD），可跳过本次检查；否则检查后把今天日期写入该文件。
+3. 如果远端版本与本地版本**不同**：**先告诉用户**，例如"发现新版本（本地 1.0.0 → 远端 1.1.0），建议更新"，
+   并询问"要我现在帮你更新吗？"——**用户确认之前不要擅自执行更新**（更新会覆盖本地文件，本地定制内容会丢失）。
+4. 用户确认后执行：`npx skills update lhg-finder -y`（当初如用 `-g` 全局安装，可再加 `-g`）。
 
 **方法借鉴**：流程借鉴 Emily27-alt/find-skill（MIT），文本独立重写。本 skill 学习其"先确认卡点、本地优先、全程不自动安装"的思想，用自己的话按平台中立标准重写，不复制原文。
 

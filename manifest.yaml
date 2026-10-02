@@ -1,6 +1,6 @@
 slug: lhg-finder
 display_name: 找 Skill 的质检门
 description: 帮你在"卡住"时先提炼 blocker 三件套并暂停确认，再用多维评分卡（license 一票否决、结构完整性、维护活跃度、安全披露、去重检查）从本地与全网筛选可放心用的 skill，全程只留两道确认门、永不自动安装。
-version: 1.0.0
+version: 1.1.0
 author: 刘洪光
 license: MIT
