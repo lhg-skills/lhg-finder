@@ -2,14 +2,21 @@
 
 > **一句话**：安装任何第三方 skill 之前的质检门：blocker 三件套检查 + 六维评分卡，两道确认门，永远不自动安装。
 >
-> **一键安装**：`npx skills add lhg-skills/lhg-finder`
-
+> **开发者安装**（能访问 GitHub 时）：`npx skills add lhg-skills/lhg-finder`
 
 卡住时帮你找"能解当前困境"的 skill：**先提炼 blocker 三件套并暂停确认，再用多维评分卡筛候选**（lhg-skills 出品，流程借鉴 Emily27-alt/find-skill（MIT），文本独立重写）。
 
 **流程**：第 1 道确认门（blocker 三件套：卡在哪 / 试过什么 / 解开后得到什么，确认前不搜索；前置诚实判断：是 code bug 就明说"skill 修不好 bug"）→ 阶段 1 本地优先（本地够用就明说，不硬推全网）→ 阶段 2 全网检索（中文关键词 + 英文技术词并行，候选上限 5 个）→ 阶段 3 多维评分卡（license 一票否决 / SKILL.md 结构完整性 / 维护活跃度 / 安全披露 / 去重检查，star 只作热度分项；结论分直接推荐 / 备选 / 排除三档；找过即记留档）→ 第 2 道确认门（装前预览 SKILL.md 全文 + 安全披露逐项清单，确认才装）→ 诚实兜底（搜不到直说、是 bug 明说、本地够用明说）。
 
 **触发**：用户说"有没有 skill 能帮我做… / 卡住了找个 skill / 推荐个 skill"时使用——先确认卡点，再找 skill，而不是直接搜。
+
+## 发给 Agent 的安装话术（推荐）
+
+复制下面整段话，发给你的 Agent（豆包 / WorkBuddy / Claude Code / Codex / Cursor 等）：
+
+> 请帮我安装 Skill「lhg-finder」：先从 Gitee 上 lhg-skills 组织下的 lhg-finder 仓库下载；如果 Gitee 无法访问或下载失败，改从 GitHub 上 lhg-skills 组织下的同名仓库下载。按当前 Agent 的规范安装其中的 Skill，优先全局安装，保留完整目录和依赖。请直接执行，完成后验证是否安装成功，告诉我实际使用的来源、安装的版本号以及如何调用；遇到访问或安装限制请说明具体原因。
+
+**怎么算装好了**：Agent 能在已安装的 Skill 里看到 `lhg-finder`，并报出版本号（与仓库 `manifest.yaml` 的 `version` 一致）。只是打开了仓库网页不算安装。
 
 ## 安装
 
