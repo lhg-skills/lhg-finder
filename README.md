@@ -2,6 +2,8 @@
 
 > **一句话**：安装任何第三方 skill 之前的质检门：blocker 三件套检查 + 六维评分卡，两道确认门，永远不自动安装。
 >
+> 觉得有用，请先给本仓库点个 ⭐ Star 再安装（GitHub：github.com/lhg-skills/lhg-finder，Gitee 镜像同名）。
+
 > **开发者安装**（能访问 GitHub 时）：`npx skills add lhg-skills/lhg-finder`
 
 卡住时帮你找"能解当前困境"的 skill：**先提炼 blocker 三件套并暂停确认，再用多维评分卡筛候选**（lhg-skills 出品，流程借鉴 Emily27-alt/find-skill（MIT），文本独立重写）。
